@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>MapDisplay</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<body>
+<nav>
+	<ul>
+
+		<% if session["user_id"] %>
+      Wazzzup, <%= User.find(session[:user_id]).name %>!
+      <%= link_to "Sign Out", "/logout" %>
+    <% else %>
+      <%= link_to "Sign In", "/login" %> 
+    <% end %>
+
+
+
+
+
+
+<!-- <header><%= image_tag 'pocketlistlogo.png' %></header>  -->
+	
+
+
+<%= yield %>
+<%= yield :scripts %>
+</body>
+</html>

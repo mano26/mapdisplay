@@ -1,0 +1,104 @@
+<h1>Listing maps</h1>
+<script src="/assets/js/modernizr.js" language="javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" language="javascript"></script>
+<!-- 
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+<script src="js/jquery.easing.js" language="javascript"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+ -->
+<script src="/assets/js/jquery.parallaxSlider.js" language="javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    var easing = 'swing';
+    $("#slider2").parallaxSlider({
+        autoPlay:500,//false to disable, otherwise int duration in ms hold between slides
+        speed:2000, //transition duration between slides
+        easing: 'swing',
+        numBackgrounds: 3,
+        thumbRotation:false,
+        //debug:true,
+    });
+    $("#slider").parallaxSlider({
+        /* debug:true */
+        }); 
+})
+
+</script>
+<style>
+#slider2 {
+    position:relative;
+}
+</style>
+  <div id="mainBG" class="homeContent" data-type="background" >
+  <div class="smoke-top"><div class="message">Value message/fancy font</div></div>
+  <div class="container">
+  <header>
+    <div class="head-set">
+      <div class="logo">
+        <h1>Boundry 51</h1>
+      </div>
+      <nav> <a href="#">FIND PLACE</a>&nbsp&nbsp&nbsp&nbsp <a href="#">MY FAVORITES<a/> &nbsp&nbsp&nbsp&nbsp <a href="#">FAQ</a> &nbsp&nbsp&nbsp&nbsp<br><br>
+      </nav>
+      <div class="login">
+        <a href="#">LOGIN</a>&nbsp&nbsp&nbsp&nbsp
+        <a href="#">FBOOK LOGIN</a>
+      </div>
+    </div>
+  </header>
+  <section>
+    <article>
+<div id="slider" class="slider" >
+    <div class="pxs_bg">
+    </div>
+    <!-- Background classes will be automatically generated, CSS must specify background images to use, see style.css for instructions -->
+    <div class="pxs_loading">Loading images...</div>
+    <div class="pxs_slider_wrapper">
+        <ul class="pxs_slider">
+            <li>
+                <a href="#"><!-- Images may be wrapped in an anchor to make them clickable -->
+                    <img src="/assets/bluemap.jpg" height="500" width="940" title="Interactive Marketing" alt="MAP1" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="/assets/whiteboard.jpg" title="Neighborhood Map" height="500" width="940" alt="MAP2" />
+                </a>
+            </li>
+            <li>
+                <img src="/assets/pencilsketch.jpg" title="Multiple Places of Interest Map" height="500" width="940" alt="MAP3" />
+            </li>
+            <li>
+                <img src="/assets/mapcolor.jpg" title="School Zone Map" height="500" width="940" alt="MAP4" />
+            </li>
+        </ul>
+        <div class="pxs_navigation">
+            <span class="pxs_next"></span>
+            <span class="pxs_prev"></span>
+        </div>
+        <!-- these are the thumbnails for the above featured images. They are ordered the same as the above slider http://192.168.0.8/lax/images, no rel/id's required for proper functioning -->
+
+    </div><!-- End .pxs_slider_wrapper -->
+</div>  
+     <div class="search">
+        <img src="/assets/writing.png" class="search-icon pbox" />
+        <img src="/assets/pencilbox.png" class="search-icon pbox2" />
+        <img src="/assets/paint.png" class="search-icon pbox3" />
+        <input class="searchfield" type="textbox" />
+        <a href="#" class="searchbtn">GET STARTED BTN</a>
+     </div>
+    </article>  
+    <aside>
+    </aside>
+  </section>
+</div>
+    <div class="smoke-bottom"></div>
+  <footer></footer>
+</div>
+
+
+
+
+<br />
+
+<%= link_to 'New Map', new_map_path %>

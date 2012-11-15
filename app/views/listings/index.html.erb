@@ -1,0 +1,39 @@
+<h1>Listing listings</h1>
+<fieldset style='width:1200px'>
+    <legend>Results</legend>
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Price</th>
+    <th>Dogs</th>
+    <th>Cats</th>
+    <th>Parking</th>
+    <th>Listed by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<%  @listings.each do |listing| %>
+
+
+  <tr>
+    
+    <td><%= listing.address %></td>
+    <td><%= listing.price %></td>
+    <td><%= listing.dogs %></td>
+    <td><%= listing.cats %></td>
+    <td><%= listing.parking %></td>
+    <td><%= listing.listed_by %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+
+<% end %>
+</table>
+</fieldset>
+<br />
+
+
+<%= link_to 'New Listing', new_listing_path %>
